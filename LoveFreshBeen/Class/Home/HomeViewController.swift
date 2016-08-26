@@ -94,7 +94,7 @@ class HomeViewController: SelectedAdressViewController {
         collectionView.registerClass(HomeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView")
         view.addSubview(collectionView)
         
-        let refreshHeadView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
+        let refreshHeadView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: #selector(headRefresh))
         refreshHeadView.gifView?.frame = CGRectMake(0, 30, 100, 100)
         collectionView.mj_header = refreshHeadView
     }

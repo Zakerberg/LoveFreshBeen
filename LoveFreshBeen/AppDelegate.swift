@@ -83,9 +83,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func addNotification() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainTabbarControllerSucess:", name: ADImageLoadSecussed, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainTabbarControllerFale", name: ADImageLoadFail, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "shoMainTabBarController", name: GuideViewControllerDidFinish, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(showMainTabbarControllerSucess), name: ADImageLoadSecussed, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(showMainTabbarControllerFale), name: ADImageLoadFail, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(shoMainTabBarController), name: GuideViewControllerDidFinish, object: nil)
     }
     
     func setUM() {
